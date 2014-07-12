@@ -14,8 +14,8 @@
       Q.input.keyboardControls();
       Q.input.joypadControls();
 
-      Q.gravityX = 0;
-      Q.gravityY = 0;
+      Q.gravityX = 2;
+      Q.gravityY = 1;
 
       var SPRITE_PLAYER = 1;
       var SPRITE_TILES = 2;
@@ -141,8 +141,8 @@
       }
 
       Q.TileLayer.extend("TowerManMap",{
-        init: function(p) {
-          this._super(p,{
+        init: function() {
+          this._super({
             type: SPRITE_TILES,
             dataAsset: 'level.json',
             sheet:     'tiles',
